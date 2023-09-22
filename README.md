@@ -12,7 +12,7 @@ Baby Tracker is meant to be a very light-weight tracker app for new (or new agai
 ## Features
 
 * Simplistic, minimal UI: fewer distractions
-* No ads (because I hate ads :P)
+* No ads (because I hate ads 😛)
 * Visual distinction between different actions (diaper changes, bottle feeding, breast feeding)
 
 # Requested (Upcoming) Features
@@ -20,4 +20,8 @@ Baby Tracker is meant to be a very light-weight tracker app for new (or new agai
 
 # Future of Baby Tracker
 
-I may want to add things such as cool graphs and charts to help visualize the data collected by parents. Or the option to add notifications if your baby's feeding window is approaching, or the ability to define a custom feeding window. Maybe there'll be more things to track in the future.
+* I may want to add things such as cool graphs and charts to help visualize the data collected by parents.
+* Or the option to add notifications if your baby's feeding window is approaching.
+* Or the ability to define a custom feeding window.
+* Maybe there'll be more things to track in the future.
+* Or I should probably make it look better first... 😅
