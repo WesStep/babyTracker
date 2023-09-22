@@ -6,7 +6,8 @@ Baby Tracker is meant to be a very light-weight tracker app for new (or new agai
 
 ## Important Notes
 
-If you look at the code, you'll notice no data is collected and submitted anywhere. Your data is your own, and it doesn't leave your device.
+* If you look at the code, you'll notice no data is collected and submitted anywhere. Your data is your own, and it doesn't leave your device.
+* Baby Tracker utilizes local storage, so if you clear your browser's cache or browsing data, you will most likely lose your tracking history. PLEASE be careful before pulling that trigger if you want to keep your tracking history.
 
 ## Features
 
