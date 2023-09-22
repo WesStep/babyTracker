@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Baby Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/script.js" type="module" defer></script>
+    <script src="https://kit.fontawesome.com/95485a04a4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Baby Tracker</h1>
+    </header>
+    <main>
+        <section id="add-record-form">
+            <label><i class="fa-2xl fa-solid fa-clock"></i> <input type="datetime-local" name="time" id="time"></label>
+            <fieldset id="add-diaper-change-event">
+                <legend>Diaper</legend>
+                <label>
+                    <input type="checkbox" id="diaper-type-wet" name="diaper-type" value="wet">
+                    Wet
+                </label>
+                <label>
+                    <input type="checkbox" id="diaper-type-dirty" name="diaper-type" value="dirty">
+                    Dirty
+                </label>
+            </fieldset>
+            <fieldset id="add-feeding-event">
+                <legend>Feeding</legend>
+                <fieldset id="record-bottle-feed-event">
+                    <legend><i class="fa-2xl fa-solid fa-bottle-water"></i> Bottle</legend>
+                    <label>
+                        <input type="checkbox" id="bottle-formula" name="bottle-formula">
+                        Formula
+                        <input type="number" name="amount" id="bottle-formula-amount" step=".01" min="0" placeholder="Amount">
+                        <select id="bottle-formula-measurement">
+                            <option value="ml">ml</option>
+                            <option value="fl-oz">fl oz</option>
+                        </select>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="bottle-breast-milk" name="bottle-breast-milk">
+                        Breast Milk
+                        <input type="number" name="amount" id="bottle-breast-milk-amount" step=".01" min="0" placeholder="Amount">
+                        <select id="bottle-breast-milk-measurement">
+                            <option value="ml">ml</option>
+                            <option value="fl-oz">fl oz</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <fieldset id="record-breastfeed-event">
+                    <legend><i class="fa-2xl fa-solid fa-person-breastfeeding"></i> Breastfeed</legend>
+                    <label>
+                        <input id="left-breast" type="checkbox" value="left">
+                        Left Breast
+                        <input type="number" name="duration" id="left-breast-duration" step=".5" min="0" placeholder="⏲️ in minutes">
+                    </label>
+                    <label>
+                        <input id="right-breast" type="checkbox" value="left">
+                        Right Breast
+                        <input type="number" name="duration" id="right-breast-duration" step=".5" min="0" placeholder="⏲️ in minutes">
+                    </label>
+                </fieldset>
+            </fieldset>
+            <div id="add-record-btn-group">
+                <button id="cancel-btn" type="button">Cancel</button>
+                <button id="add-record-btn" type="button">Add Record</button>
+            </div>
+        </section>
+        <section id="records">
+            <h1>Records</h1>
+            <table id="record-list">
+            </table>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

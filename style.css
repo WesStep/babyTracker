@@ -1,0 +1,102 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/**
+ * END CSS Reset
+ */
+
+
+
+body {
+    margin: 0.5rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    inline-size: auto;
+    border-radius: 0.25rem;
+}
+
+#add-record-btn-group {
+    margin-block: 0.25rem;
+}
+
+label {
+    display: block;
+    width: auto;
+    margin-block: 0.25rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 0.5rem;
+}
+
+td {
+    text-align: center;
+}
+
+#record-breastfeed-event {
+    margin-block: 0.5rem;
+}
+
+#record-bottle-feed-event {
+    margin-block: 0.5rem;
+}
+
+#add-feeding-event {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
+}
+
+#add-diaper-change-event {
+    display: inline-grid;
+}
+
+.active-cell {
+    background-color: lightgreen;
+}
