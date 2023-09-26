@@ -125,7 +125,8 @@ function updateRecordListDisplay() {
             <th>Minutes</th>
             <th>Minutes</th>
         </tr>`;
-    for (const babyEvent of babyEvents.getBabyEvents()) {
+    const babyEventList = getSortedBabyEvents();
+    for (const babyEvent of babyEventList) {
         const dateString = new Date(babyEvent.time)
             .toLocaleDateString('en-US', {
                 weekday: 'short',
@@ -168,6 +169,19 @@ function updateRecordListDisplay() {
         rowString += `</tr>`;
         recordList.innerHTML += rowString;
     }
+}
+
+function getSortedBabyEvents() {
+    const events = babyEvents.getBabyEvents()
+    events.sort((a, b) => {
+        if (a.time.valueOf() < b.time.valueOf()) {
+            return 1;
+        } else if (a.time.valueOf() > b.time.valueOf()) {
+            return -1;
+        }
+        return 0;
+    });
+    return events;
 }
 
 function resetInputs() {
