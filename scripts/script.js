@@ -130,7 +130,6 @@ function updateRecordListDisplay() {
         const dateString = new Date(babyEvent.time)
             .toLocaleDateString('en-US', {
                 weekday: 'short',
-                year: 'numeric',
                 day: 'numeric',
                 month: 'short'
             });
@@ -141,7 +140,7 @@ function updateRecordListDisplay() {
                 minute: 'numeric'
             });
         let rowString = `<tr>
-            <td>${dateString + ' @ ' + timeString}</td>`;
+            <td>${dateString + ', ' + timeString}</td>`;
         rowString += babyEvent.wetDiaper
             ? `<td class="active-cell"><i class="fa-solid fa-check fa-2xl"></i></td>`
             : `<td></td>`;
