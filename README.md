@@ -17,6 +17,7 @@ Baby Tracker is meant to be a very light-weight tracker app for new (or new agai
 
 # Requested (Upcoming) Features
 * "Feeding Window Approaching" notification
+* Sort events by latest at top
 
 # Future of Baby Tracker
 
