@@ -38,7 +38,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 
-body {
+header, main, footer {
     margin: 0.5rem;
 }
 
@@ -99,4 +99,22 @@ td {
 
 .active-cell {
     background-color: lightgreen;
+}
+
+#feeding-window-banner {
+    width: 100%;
+    background-color: oklch(75% 0.5 130);
+    text-align: center;
+    container: inline-size;
+
+    & h1 {
+        padding-block: 1cqi;
+    }
+}
+
+hr {
+    margin-block: 1rem;
+    border-top: 2px solid oklch(0 0 0);
+    border-inline: none;
+    border-bottom: none;
 }

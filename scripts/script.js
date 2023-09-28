@@ -1,32 +1,16 @@
 import { BabyEvent } from "./BabyEvent.js";
 import { BabyEvents } from "./BabyEvents.js";
-
-const addRecordBtn = document.getElementById('add-record-btn');
-const cancelButton = document. getElementById('cancel-btn');
-
-// Inputs
-const time = document.getElementById('time');
-
-const wetDiaper = document.getElementById('diaper-type-wet');
-const dirtyDiaper = document.getElementById('diaper-type-dirty');
-
-const formula = document.getElementById('bottle-formula');
-const formulaAmount = document.getElementById('bottle-formula-amount');
-const formulaMeasurement = document
-    .getElementById('bottle-formula-measurement');
-
-const breastMilk = document.getElementById('bottle-breast-milk');
-const breastMilkAmount = document.getElementById('bottle-breast-milk-amount');
-const breastMilkMeasurement = document
-    .getElementById('bottle-breast-milk-measurement');
-
-const leftBreast = document.getElementById('left-breast');
-const leftBreastDurationInMinutes = document
-    .getElementById('left-breast-duration');
-const rightBreast = document.getElementById('right-breast');
-const rightBreastDurationInMinutes = document
-    .getElementById('right-breast-duration');
-
+import {
+    time,
+    wetDiaper,
+    dirtyDiaper,
+    addRecordBtn,
+    cancelButton,
+    formula, formulaAmount, formulaMeasurement,
+    breastMilk, breastMilkAmount, breastMilkMeasurement,
+    leftBreast, leftBreastDurationInMinutes,
+    rightBreast, rightBreastDurationInMinutes
+} from "./DOM.js";
 
 const babyEvents = new BabyEvents();
 

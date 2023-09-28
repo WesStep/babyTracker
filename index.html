@@ -9,11 +9,19 @@
     <script src="https://kit.fontawesome.com/95485a04a4.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<section id="feeding-window-banner">
+    <h1>Time Until Next Feeding Window: 1:30</h1>
+</section>
     <header>
         <h1>Baby Tracker</h1>
     </header>
     <main>
+        <section id="set-feeding-window-duration-form">
+            <h3>Feeding Window</h3>
+        </section>
+        <hr>
         <section id="add-record-form">
+            <h3>Add New Record</h3>
             <label><i class="fa-2xl fa-solid fa-clock"></i> <input type="datetime-local" name="time" id="time"></label>
             <fieldset id="add-diaper-change-event">
                 <legend>Diaper</legend>
@@ -68,8 +76,9 @@
                 <button id="add-record-btn" type="button">Add Record</button>
             </div>
         </section>
+        <hr>
         <section id="records">
-            <h1>Records</h1>
+            <h3>Records</h3>
             <table id="record-list">
             </table>
         </section>
