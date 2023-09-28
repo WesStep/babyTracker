@@ -1,11 +1,8 @@
 import { BabyEvent } from "./BabyEvent.js";
 import { BabyEvents } from "./BabyEvents.js";
 import {
-    time,
-    wetDiaper,
-    dirtyDiaper,
-    addRecordBtn,
-    cancelButton,
+    time, addRecordBtn, cancelButton,
+    wetDiaper, dirtyDiaper,
     formula, formulaAmount, formulaMeasurement,
     breastMilk, breastMilkAmount, breastMilkMeasurement,
     leftBreast, leftBreastDurationInMinutes,
