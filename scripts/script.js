@@ -89,24 +89,8 @@ function addBreastFeedEvent() {
 
 function updateRecordListDisplay() {
     const recordList = document.getElementById('record-list');
-    recordList.innerHTML = `<tr>
-            <th rowspan="2"><i class="fa-2xl fa-solid fa-clock"></i></th>
-            <th colspan="2">Diaper</th>
-            <th colspan="2"><i class="fa-2xl fa-solid fa-bottle-water"></i> Formula</th>
-            <th colspan="2"><i class="fa-2xl fa-solid fa-bottle-water"></i> Breast Milk</th>
-            <th><i class="fa-2xl fa-solid fa-person-breastfeeding"></i> Left Breast</th>
-            <th><i class="fa-2xl fa-solid fa-person-breastfeeding fa-flip-horizontal"></i> Right Breast</th>
-        </tr>
-        <tr>
-            <th><i class="fa-2xl fa-solid fa-droplet"></i></th>
-            <th><i class="fa-2xl fa-solid fa-poop"></i></th>
-            <th>Amt</th>
-            <th>ml/oz</th>
-            <th>Amt</th>
-            <th>ml/oz</th>
-            <th>Minutes</th>
-            <th>Minutes</th>
-        </tr>`;
+    console.dir(document.getElementById('table-header').innerHTML);
+    recordList.innerHTML = document.getElementById('table-header').innerHTML;
     const babyEventList = getSortedBabyEvents();
     for (const babyEvent of babyEventList) {
         const dateString = new Date(babyEvent.time)
