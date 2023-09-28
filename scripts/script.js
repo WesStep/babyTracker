@@ -89,7 +89,7 @@ function addBreastFeedEvent() {
 
 function getSortedBabyEvents() {
     const events = babyEvents.getBabyEvents()
-    events.sort((a, b) => {
+    return events.sort((a, b) => {
         if (a.time.valueOf() < b.time.valueOf()) {
             return 1;
         } else if (a.time.valueOf() > b.time.valueOf()) {
@@ -97,7 +97,6 @@ function getSortedBabyEvents() {
         }
         return 0;
     });
-    return events;
 }
 
 function cancel() {
