@@ -23,3 +23,19 @@ export const leftBreastDurationInMinutes = document
 export const rightBreast = document.getElementById('right-breast');
 export const rightBreastDurationInMinutes = document
     .getElementById('right-breast-duration');
+
+export function resetInputs() {
+    time.value = '';
+    wetDiaper.checked = false;
+    dirtyDiaper.checked = false;
+    formula.checked = false;
+    formulaAmount.value = '';
+    formulaMeasurement.selectedIndex = 0;
+    breastMilk.checked = false;
+    breastMilkAmount.value = '';
+    breastMilkMeasurement.selectedIndex = 0;
+    leftBreast.checked = false;
+    leftBreastDurationInMinutes.value = '';
+    rightBreast.checked = false;
+    rightBreastDurationInMinutes.value = '';
+}

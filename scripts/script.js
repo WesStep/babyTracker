@@ -6,8 +6,9 @@ import {
     formula, formulaAmount, formulaMeasurement,
     breastMilk, breastMilkAmount, breastMilkMeasurement,
     leftBreast, leftBreastDurationInMinutes,
-    rightBreast, rightBreastDurationInMinutes
-} from "./DOM.js";
+    rightBreast, rightBreastDurationInMinutes,
+    resetInputs,
+} from './DOM.js';
 
 const babyEvents = new BabyEvents();
 
@@ -162,22 +163,6 @@ function getSortedBabyEvents() {
         return 0;
     });
     return events;
-}
-
-function resetInputs() {
-    time.value = '';
-    wetDiaper.checked = false;
-    dirtyDiaper.checked = false;
-    formula.checked = false;
-    formulaAmount.value = '';
-    formulaMeasurement.selectedIndex = 0;
-    breastMilk.checked = false;
-    breastMilkAmount.value = '';
-    breastMilkMeasurement.selectedIndex = 0;
-    leftBreast.checked = false;
-    leftBreastDurationInMinutes.value = '';
-    rightBreast.checked = false;
-    rightBreastDurationInMinutes.value = '';
 }
 
 function cancel() {
