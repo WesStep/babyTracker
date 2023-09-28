@@ -39,3 +39,51 @@ export function resetInputs() {
     rightBreast.checked = false;
     rightBreastDurationInMinutes.value = '';
 }
+
+export function updateRecordListDisplay(babyEventList) {
+    const recordList = document.getElementById('record-list');
+    console.dir(document.getElementById('table-header').innerHTML);
+    recordList.innerHTML = document.getElementById('table-header').innerHTML;
+    for (const babyEvent of babyEventList) {
+        const dateString = new Date(babyEvent.time)
+            .toLocaleDateString('en-US', {
+                weekday: 'short',
+                day: 'numeric',
+                month: 'short'
+            });
+        const timeString = new Date(babyEvent.time)
+            .toLocaleTimeString('en-US', {
+                hour12: true,
+                hour: 'numeric',
+                minute: 'numeric'
+            });
+        let rowString = `<tr>
+            <td>${dateString + ', ' + timeString}</td>`;
+        rowString += babyEvent.wetDiaper
+            ? `<td class="active-cell"><i class="fa-solid fa-check fa-2xl"></i></td>`
+            : `<td></td>`;
+        rowString += babyEvent.dirtyDiaper
+            ? `<td class="active-cell"><i class="fa-solid fa-check fa-2xl"></i></td>`
+            : `<td></td>`;
+        rowString += babyEvent.formula
+            ? `
+                <td class="active-cell">${babyEvent.formulaAmount}</td>
+                <td class="active-cell">${babyEvent.formulaMeasurement}</td>
+            `
+            : `<td></td><td></td>`;
+        rowString += babyEvent.breastMilk
+            ? `
+                <td class="active-cell">${babyEvent.breastMilkAmount}</td>
+                <td class="active-cell">${babyEvent.breastMilkMeasurement}</td>
+            `
+            : `<td></td><td></td>`;
+        rowString += babyEvent.leftBreast
+            ? `<td class="active-cell">${babyEvent.leftBreastDurationInMinutes}</td>`
+            : `<td></td>`;
+        rowString += babyEvent.rightBreast
+            ? `<td class="active-cell">${babyEvent.rightBreastDurationInMinutes}</td>`
+            : `<td></td>`;
+        rowString += `</tr>`;
+        recordList.innerHTML += rowString;
+    }
+}

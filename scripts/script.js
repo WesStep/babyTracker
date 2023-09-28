@@ -7,7 +7,7 @@ import {
     breastMilk, breastMilkAmount, breastMilkMeasurement,
     leftBreast, leftBreastDurationInMinutes,
     rightBreast, rightBreastDurationInMinutes,
-    resetInputs,
+    resetInputs, updateRecordListDisplay,
 } from './DOM.js';
 
 const babyEvents = new BabyEvents();
@@ -15,7 +15,7 @@ const babyEvents = new BabyEvents();
 function init() {
     addRecordBtn.addEventListener('click', recordBabyEvent);
     cancelButton.addEventListener('click', cancel);
-    updateRecordListDisplay();
+    updateRecordListDisplay(getSortedBabyEvents());
 }
 
 function recordBabyEvent() {
@@ -26,7 +26,7 @@ function recordBabyEvent() {
     } else if (eventIsBreastFeeding()) {
         addBreastFeedEvent();
     }
-    updateRecordListDisplay();
+    updateRecordListDisplay(getSortedBabyEvents());
     resetInputs();
 }
 
@@ -84,55 +84,6 @@ function addBreastFeedEvent() {
         ));
     } catch (e) {
         window.alert(e);
-    }
-}
-
-function updateRecordListDisplay() {
-    const recordList = document.getElementById('record-list');
-    console.dir(document.getElementById('table-header').innerHTML);
-    recordList.innerHTML = document.getElementById('table-header').innerHTML;
-    const babyEventList = getSortedBabyEvents();
-    for (const babyEvent of babyEventList) {
-        const dateString = new Date(babyEvent.time)
-            .toLocaleDateString('en-US', {
-                weekday: 'short',
-                day: 'numeric',
-                month: 'short'
-            });
-        const timeString = new Date(babyEvent.time)
-            .toLocaleTimeString('en-US', {
-                hour12: true,
-                hour: 'numeric',
-                minute: 'numeric'
-            });
-        let rowString = `<tr>
-            <td>${dateString + ', ' + timeString}</td>`;
-        rowString += babyEvent.wetDiaper
-            ? `<td class="active-cell"><i class="fa-solid fa-check fa-2xl"></i></td>`
-            : `<td></td>`;
-        rowString += babyEvent.dirtyDiaper
-            ? `<td class="active-cell"><i class="fa-solid fa-check fa-2xl"></i></td>`
-            : `<td></td>`;
-        rowString += babyEvent.formula
-            ? `
-                <td class="active-cell">${babyEvent.formulaAmount}</td>
-                <td class="active-cell">${babyEvent.formulaMeasurement}</td>
-            `
-            : `<td></td><td></td>`;
-        rowString += babyEvent.breastMilk
-            ? `
-                <td class="active-cell">${babyEvent.breastMilkAmount}</td>
-                <td class="active-cell">${babyEvent.breastMilkMeasurement}</td>
-            `
-            : `<td></td><td></td>`;
-        rowString += babyEvent.leftBreast
-            ? `<td class="active-cell">${babyEvent.leftBreastDurationInMinutes}</td>`
-            : `<td></td>`;
-        rowString += babyEvent.rightBreast
-            ? `<td class="active-cell">${babyEvent.rightBreastDurationInMinutes}</td>`
-            : `<td></td>`;
-        rowString += `</tr>`;
-        recordList.innerHTML += rowString;
     }
 }
 
