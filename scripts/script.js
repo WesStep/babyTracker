@@ -7,7 +7,7 @@ import {
     breastMilk, breastMilkAmount, breastMilkMeasurement,
     leftBreast, leftBreastDurationInMinutes,
     rightBreast, rightBreastDurationInMinutes,
-    resetInputs, updateRecordListDisplay,
+    resetAddRecordFormInputs, updateRecordListDisplay,
 } from './DOM.js';
 
 const babyEvents = new BabyEvents();
@@ -27,7 +27,7 @@ function recordBabyEvent() {
         addBreastFeedEvent();
     }
     updateRecordListDisplay(getSortedBabyEvents());
-    resetInputs();
+    resetAddRecordFormInputs();
 }
 
 const eventIsDiaperChange = () => wetDiaper.checked || dirtyDiaper.checked;
@@ -100,7 +100,7 @@ function getSortedBabyEvents() {
 }
 
 function cancel() {
-    resetInputs();
+    resetAddRecordFormInputs();
 }
 
 init();

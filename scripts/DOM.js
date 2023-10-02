@@ -35,7 +35,7 @@ export const rightBreastDurationInMinutes = document
  *  END FORM INPUTS
  ******************************************************************************/
 
-export function resetInputs() {
+export function resetAddRecordFormInputs() {
     time.value = '';
     wetDiaper.checked = false;
     dirtyDiaper.checked = false;
