@@ -10,10 +10,6 @@
     margin: 0;
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -99,17 +95,6 @@ td {
 
 .active-cell {
     background-color: oklch(75% 0.5 130);
-}
-
-#feeding-window-banner {
-    width: 100%;
-    background-color: oklch(75% 0.5 130);
-    text-align: center;
-    container: inline-size;
-
-    & h1 {
-        padding-block: 1cqi;
-    }
 }
 
 hr {

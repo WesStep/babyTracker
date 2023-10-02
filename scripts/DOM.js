@@ -1,28 +1,39 @@
+// Add Record Buttons
 export const addRecordBtn = document.getElementById('add-record-btn');
 export const cancelButton = document. getElementById('cancel-btn');
 
-// Inputs
+/*******************************************************************************
+ * FORM INPUTS
+ ******************************************************************************/
+// Time
 export const time = document.getElementById('time');
 
+// Diaper
 export const wetDiaper = document.getElementById('diaper-type-wet');
 export const dirtyDiaper = document.getElementById('diaper-type-dirty');
 
+// Formula
 export const formula = document.getElementById('bottle-formula');
 export const formulaAmount = document.getElementById('bottle-formula-amount');
 export const formulaMeasurement = document
     .getElementById('bottle-formula-measurement');
 
+// Breast milk
 export const breastMilk = document.getElementById('bottle-breast-milk');
 export const breastMilkAmount = document.getElementById('bottle-breast-milk-amount');
 export const breastMilkMeasurement = document
     .getElementById('bottle-breast-milk-measurement');
 
+// Breastfeeding
 export const leftBreast = document.getElementById('left-breast');
 export const leftBreastDurationInMinutes = document
     .getElementById('left-breast-duration');
 export const rightBreast = document.getElementById('right-breast');
 export const rightBreastDurationInMinutes = document
     .getElementById('right-breast-duration');
+/*******************************************************************************
+ *  END FORM INPUTS
+ ******************************************************************************/
 
 export function resetInputs() {
     time.value = '';
@@ -42,7 +53,6 @@ export function resetInputs() {
 
 export function updateRecordListDisplay(babyEventList) {
     const recordList = document.getElementById('record-list');
-    console.dir(document.getElementById('table-header').innerHTML);
     recordList.innerHTML = document.getElementById('table-header').innerHTML;
     for (const babyEvent of babyEventList) {
         const dateString = new Date(babyEvent.time)
