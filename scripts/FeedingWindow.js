@@ -1,12 +1,37 @@
 export class FeedingWindow {
-    storeName = 'feeding-window';
+    static storeName = 'feeding-window';
     minutesUntilNextFeeding;
     durationInMinutes;
+    startTime;
 
-    constructor(startTime, minutesUntilNextFeeding = 120, durationInMinutes = 60) {
+    constructor(startTime, minutesUntilNextFeeding, durationInMinutes) {
         this.startTime = startTime;
         this.minutesUntilNextFeeding = minutesUntilNextFeeding;
         this.durationInMinutes = durationInMinutes;
+    }
+
+    static getFeedingWindow() {
+        if (localStorage.getItem(this.storeName) === null) {
+            const feedWindowData = {
+                durationInMinutes: null,
+                minutesUntilNextFeeding: null,
+                startTime: null
+            };
+            localStorage.setItem(this.storeName, JSON.stringify(feedWindowData));
+        }
+        const feedWindowString = localStorage.getItem(this.storeName);
+        const feedWindowData = JSON.parse(feedWindowString);
+        return new FeedingWindow(
+            feedWindowData.startTime,
+            feedWindowData.minutesUntilNextFeeding,
+            feedWindowData.durationInMinutes
+        );
+    }
+
+    setMinutesUntilNextFeeding(minutes) {
+        const window = FeedingWindow.getFeedingWindow();
+        window.minutesUntilNextFeeding = +minutes;
+        localStorage.setItem(FeedingWindow.storeName, JSON.stringify(window));
     }
 }
 
