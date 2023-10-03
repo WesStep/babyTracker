@@ -16,7 +16,7 @@ export const updateWindowBtn = document.getElementById('update-feeding-window-bt
 
 
 /*******************************************************************************
- * FORM INPUTS
+ * ADD EVENT FORM INPUTS
  ******************************************************************************/
 // Time
 export const time = document.getElementById('time');
@@ -45,7 +45,7 @@ export const rightBreast = document.getElementById('right-breast');
 export const rightBreastDurationInMinutes = document
     .getElementById('right-breast-duration');
 /*******************************************************************************
- *  END FORM INPUTS
+ *  END ADD EVENT FORM INPUTS
  ******************************************************************************/
 
 export function resetAddRecordFormInputs() {
