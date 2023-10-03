@@ -24,6 +24,8 @@ device for one child and the other device for the other child.
 
 # Requested (Upcoming) Features
 * "Feeding Window Approaching" notification
+* User Settings modal
+* Import/Export data
 
 # Future of Baby Tracker
 
