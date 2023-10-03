@@ -2,6 +2,19 @@
 export const addRecordBtn = document.getElementById('add-record-btn');
 export const cancelButton = document. getElementById('cancel-btn');
 
+
+
+/*******************************************************************************
+ * FEEDING WINDOW FORM INPUTS
+ ******************************************************************************/
+export const minutesToNextWindow = document.getElementById('minutes-to-next-window');
+export const updateWindowBtn = document.getElementById('update-feeding-window-btn');
+/*******************************************************************************
+ * END FEEDING WINDOW FORM INPUTS
+ ******************************************************************************/
+
+
+
 /*******************************************************************************
  * FORM INPUTS
  ******************************************************************************/
