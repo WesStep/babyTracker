@@ -7,15 +7,18 @@ import {
     breastMilk, breastMilkAmount, breastMilkMeasurement,
     leftBreast, leftBreastDurationInMinutes,
     rightBreast, rightBreastDurationInMinutes,
-    resetAddRecordFormInputs, updateRecordListDisplay,
+    resetAddRecordFormInputs, updateRecordListDisplay, updateWindowBtn, minutesToNextWindow,
 } from './DOM.js';
+import { FeedingWindow } from './FeedingWindow.js';
 
 const babyEvents = new BabyEvents();
+const feedingWindow = FeedingWindow.getFeedingWindow();
 
 function init() {
     addRecordBtn.addEventListener('click', recordBabyEvent);
     cancelButton.addEventListener('click', cancel);
     updateRecordListDisplay(getSortedBabyEvents());
+    updateWindowBtn.addEventListener('click', updateFeedingWindow);
 }
 
 function recordBabyEvent() {
@@ -101,6 +104,11 @@ function getSortedBabyEvents() {
 
 function cancel() {
     resetAddRecordFormInputs();
+}
+
+function updateFeedingWindow() {
+    const minutes = minutesToNextWindow.value;
+    feedingWindow.setMinutesUntilNextFeeding(minutes);
 }
 
 init();
