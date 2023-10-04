@@ -19,8 +19,7 @@ export class FeedingWindow {
             };
             localStorage.setItem(this.storeName, JSON.stringify(feedWindowData));
         }
-        const feedWindowString = localStorage.getItem(this.storeName);
-        const feedWindowData = JSON.parse(feedWindowString);
+        const feedWindowData = JSON.parse(localStorage.getItem(this.storeName));
         return new FeedingWindow(
             feedWindowData.startTime,
             feedWindowData.minutesUntilNextFeeding,
