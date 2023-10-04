@@ -28,9 +28,15 @@ export class FeedingWindow {
     }
 
     setMinutesUntilNextFeeding(minutes) {
-        const window = FeedingWindow.getFeedingWindow();
-        window.minutesUntilNextFeeding = +minutes;
-        localStorage.setItem(FeedingWindow.storeName, JSON.stringify(window));
+        const feedingWindow = FeedingWindow.getFeedingWindow();
+        feedingWindow.minutesUntilNextFeeding = +minutes;
+        localStorage.setItem(FeedingWindow.storeName, JSON.stringify(feedingWindow));
+    }
+
+    setDurationInMinutes(minutes) {
+        const feedingWindow = FeedingWindow.getFeedingWindow();
+        feedingWindow.durationInMinutes = +minutes;
+        localStorage.setItem(FeedingWindow.storeName, JSON.stringify(feedingWindow));
     }
 }
 
