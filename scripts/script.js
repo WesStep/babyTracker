@@ -123,7 +123,13 @@ function cancel() {
 
 function updateFeedingWindow() {
     const minutes = minutesToNextWindow.value;
-    feedingWindow.setMinutesUntilNextFeeding(minutes);
+    const duration = feedingWindowDuration.value;
+    if (minutes) {
+        feedingWindow.setMinutesUntilNextFeeding(minutes);
+    }
+    if (duration) {
+        feedingWindow.setDurationInMinutes(duration);
+    }
 }
 
 init();
