@@ -1,13 +1,27 @@
 import { BabyEvent } from "./BabyEvent.js";
 import { BabyEvents } from "./BabyEvents.js";
 import {
-    time, addRecordBtn, cancelButton,
-    wetDiaper, dirtyDiaper,
-    formula, formulaAmount, formulaMeasurement,
-    breastMilk, breastMilkAmount, breastMilkMeasurement,
-    leftBreast, leftBreastDurationInMinutes,
-    rightBreast, rightBreastDurationInMinutes,
-    resetAddRecordFormInputs, updateRecordListDisplay, updateWindowBtn, minutesToNextWindow,
+    time,
+    addRecordBtn,
+    cancelButton,
+    wetDiaper,
+    dirtyDiaper,
+    formula,
+    formulaAmount,
+    formulaMeasurement,
+    breastMilk,
+    breastMilkAmount,
+    breastMilkMeasurement,
+    leftBreast,
+    leftBreastDurationInMinutes,
+    rightBreast,
+    rightBreastDurationInMinutes,
+    resetAddRecordFormInputs,
+    updateRecordListDisplay,
+    updateWindowBtn,
+    minutesToNextWindow,
+    feedingWindowDuration,
+    initFeedingWindowInputValues,
 } from './DOM.js';
 import { FeedingWindow } from './FeedingWindow.js';
 
