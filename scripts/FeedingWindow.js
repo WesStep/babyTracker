@@ -38,6 +38,12 @@ export class FeedingWindow {
         feedingWindow.durationInMinutes = +minutes;
         localStorage.setItem(FeedingWindow.storeName, JSON.stringify(feedingWindow));
     }
+
+    setStartTime(startTime) {
+        const feedingWindow = FeedingWindow.getFeedingWindow();
+        feedingWindow.startTime = startTime;
+        localStorage.setItem(FeedingWindow.storeName, JSON.stringify(feedingWindow));
+    }
 }
 
 /******************************* GENERAL IDEA **********************************
