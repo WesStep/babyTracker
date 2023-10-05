@@ -10,7 +10,7 @@ export const cancelButton = document. getElementById('cancel-btn');
  * FEEDING WINDOW FORM INPUTS
  ******************************************************************************/
 export const minutesToNextWindow = document.getElementById('minutes-to-next-window');
-export const feedingWindowDuration = document.getElementById('feeding-window-duration')
+export const feedingWindowDuration = document.getElementById('feeding-window-duration');
 export const updateWindowBtn = document.getElementById('update-feeding-window-btn');
 
 export function initFeedingWindowInputValues() {
