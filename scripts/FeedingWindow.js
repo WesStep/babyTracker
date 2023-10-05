@@ -44,6 +44,30 @@ export class FeedingWindow {
         feedingWindow.startTime = startTime;
         localStorage.setItem(FeedingWindow.storeName, JSON.stringify(feedingWindow));
     }
+
+    beforeActiveWindow() {
+        const feedingWindow = FeedingWindow.getFeedingWindow();
+        const now = new Date();
+        const startTime = new Date(feedingWindow.startTime);
+        return feedingWindow.startTime !== null
+            && startTime.getTime() >= now.getTime();
+    }
+
+    inActiveWindow() {
+        const feedingWindow = FeedingWindow.getFeedingWindow();
+        const now = new Date();
+        const startTime = new Date(feedingWindow.startTime);
+        const endTime = new Date(startTime.getTime() + (feedingWindow.durationInMinutes * 60000));
+        return feedingWindow.startTime !== null && (now >= startTime && now <= endTime);
+    }
+
+    afterActiveWindow() {
+        const feedingWindow = FeedingWindow.getFeedingWindow();
+        const now = new Date();
+        const durationInMilliseconds = feedingWindow.durationInMinutes * 60000;
+        const endTime = new Date(new Date(feedingWindow.startTime).getTime() + durationInMilliseconds);
+        return feedingWindow.startTime !== null && (now >= endTime);
+    }
 }
 
 /******************************* GENERAL IDEA **********************************

@@ -22,6 +22,7 @@ import {
     minutesToNextWindow,
     feedingWindowDuration,
     initFeedingWindowInputValues,
+    feedingWindowStartTime,
 } from './DOM.js';
 import { FeedingWindow } from './FeedingWindow.js';
 
@@ -34,6 +35,7 @@ function init() {
     updateRecordListDisplay(getSortedBabyEvents());
     updateWindowBtn.addEventListener('click', updateFeedingWindow);
     initFeedingWindowInputValues();
+    initFeedingWindowDisplay();
 }
 
 function recordBabyEvent() {
@@ -124,11 +126,26 @@ function cancel() {
 function updateFeedingWindow() {
     const minutes = minutesToNextWindow.value;
     const duration = feedingWindowDuration.value;
+    const startTime = feedingWindowStartTime.value;
     if (minutes) {
         feedingWindow.setMinutesUntilNextFeeding(minutes);
     }
     if (duration) {
         feedingWindow.setDurationInMinutes(duration);
+    }
+    if (startTime) {
+        feedingWindow.setStartTime(startTime);
+    }
+    initFeedingWindowDisplay();
+}
+
+function initFeedingWindowDisplay() {
+    if (feedingWindow.beforeActiveWindow()) {
+        alert('Before active window, get some rest.');
+    } else if (feedingWindow.inActiveWindow()) {
+        alert('In active window, feed baby now!');
+    } else if (feedingWindow.afterActiveWindow()) {
+        alert('After active window! FEED BABY NOW! >:(');
     }
 }
 

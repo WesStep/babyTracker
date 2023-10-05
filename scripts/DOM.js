@@ -11,12 +11,14 @@ export const cancelButton = document. getElementById('cancel-btn');
  ******************************************************************************/
 export const minutesToNextWindow = document.getElementById('minutes-to-next-window');
 export const feedingWindowDuration = document.getElementById('feeding-window-duration');
+export const feedingWindowStartTime = document.getElementById('feeding-window-start-time');
 export const updateWindowBtn = document.getElementById('update-feeding-window-btn');
 
 export function initFeedingWindowInputValues() {
     const feedingWindow = FeedingWindow.getFeedingWindow();
     minutesToNextWindow.value = feedingWindow.minutesUntilNextFeeding;
     feedingWindowDuration.value = feedingWindow.durationInMinutes;
+    feedingWindowStartTime.value = feedingWindow.startTime;
 }
 
 
