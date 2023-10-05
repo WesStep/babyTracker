@@ -1,3 +1,5 @@
+import { FeedingWindow } from './FeedingWindow.js';
+
 // Add Record Buttons
 export const addRecordBtn = document.getElementById('add-record-btn');
 export const cancelButton = document. getElementById('cancel-btn');
@@ -10,9 +12,12 @@ export const cancelButton = document. getElementById('cancel-btn');
 export const minutesToNextWindow = document.getElementById('minutes-to-next-window');
 export const feedingWindowDuration = document.getElementById('feeding-window-duration')
 export const updateWindowBtn = document.getElementById('update-feeding-window-btn');
-/*******************************************************************************
- * END FEEDING WINDOW FORM INPUTS
- ******************************************************************************/
+
+export function initFeedingWindowInputValues() {
+    const feedingWindow = FeedingWindow.getFeedingWindow();
+    minutesToNextWindow.value = feedingWindow.minutesUntilNextFeeding;
+    feedingWindowDuration.value = feedingWindow.durationInMinutes;
+}
 
 
 

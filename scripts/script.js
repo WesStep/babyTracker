@@ -33,6 +33,7 @@ function init() {
     cancelButton.addEventListener('click', cancel);
     updateRecordListDisplay(getSortedBabyEvents());
     updateWindowBtn.addEventListener('click', updateFeedingWindow);
+    initFeedingWindowInputValues();
 }
 
 function recordBabyEvent() {
