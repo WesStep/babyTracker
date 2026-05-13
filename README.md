@@ -35,7 +35,6 @@ one device for one child and the other device for the other child.
 
 # Future of Baby Tracker
 
-* Dark Mode.
 * Make it cloud-native.
 * Nap tracking.
 * Graphs or charts to help visualize data collected by parents.
