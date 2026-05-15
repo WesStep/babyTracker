@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Baby Tracker</title>
     <link rel="stylesheet" href="style.css">
     <script src="scripts/script.js" type="module" defer></script>
@@ -15,14 +16,14 @@
     <main>
         <section id="add-record-form">
             <h3>Add New Record</h3>
-            <label><i class="fa-2xl fa-solid fa-clock"></i> <input type="datetime-local" name="time" id="time"></label>
+            <label><span class="fa-2xl fa-solid fa-clock"></span> <input type="datetime-local" name="time" id="time"></label>
             <fieldset id="add-diaper-change-event">
                 <legend>Diaper</legend>
-                <label>
+                <label class="checkbox-label">
                     <input type="checkbox" id="diaper-type-wet" name="diaper-type" value="wet">
                     Wet
                 </label>
-                <label>
+                <label class="checkbox-label">
                     <input type="checkbox" id="diaper-type-dirty" name="diaper-type" value="dirty">
                     Dirty
                 </label>
@@ -30,7 +31,7 @@
             <fieldset id="add-feeding-event">
                 <legend>Feeding</legend>
                 <fieldset id="record-bottle-feed-event">
-                    <legend><i class="fa-2xl fa-solid fa-bottle-water"></i> Bottle</legend>
+                    <legend><span class="fa-2xl fa-solid fa-bottle-water"></span> Bottle</legend>
                     <label>
                         <input type="checkbox" id="bottle-formula" name="bottle-formula">
                         Formula
@@ -61,7 +62,7 @@
                     </label>
                 </fieldset>
                 <fieldset id="record-breastfeed-event">
-                    <legend><i class="fa-2xl fa-solid fa-person-breastfeeding"></i> Breastfeed</legend>
+                    <legend><span class="fa-2xl fa-solid fa-person-breastfeeding"></span> Breastfeed</legend>
                     <label>
                         <input id="left-breast" type="checkbox" value="left">
                         Left Breast
@@ -101,16 +102,16 @@
     </footer>
     <template id="table-header">
         <tr>
-            <th rowspan="2"><i class="fa-2xl fa-solid fa-clock"></i></th>
+            <th rowspan="2"><span class="fa-2xl fa-solid fa-clock"></span></th>
             <th colspan="2">Diaper</th>
-            <th colspan="2"><i class="fa-2xl fa-solid fa-bottle-water"></i> Formula</th>
-            <th colspan="2"><i class="fa-2xl fa-solid fa-bottle-water"></i> Breast Milk</th>
-            <th><i class="fa-2xl fa-solid fa-person-breastfeeding"></i> Left Breast</th>
-            <th><i class="fa-2xl fa-solid fa-person-breastfeeding fa-flip-horizontal"></i> Right Breast</th>
+            <th colspan="2"><span class="fa-2xl fa-solid fa-bottle-water"></span> Formula</th>
+            <th colspan="2"><span class="fa-2xl fa-solid fa-bottle-water"></span> Breast Milk</th>
+            <th><span class="fa-2xl fa-solid fa-person-breastfeeding"></span> Left Breast</th>
+            <th><span class="fa-2xl fa-solid fa-person-breastfeeding fa-flip-horizontal"></span> Right Breast</th>
         </tr>
         <tr>
-            <th><i class="fa-2xl fa-solid fa-droplet"></i></th>
-            <th><i class="fa-2xl fa-solid fa-poop"></i></th>
+            <th><span class="fa-2xl fa-solid fa-droplet"></span></th>
+            <th><span class="fa-2xl fa-solid fa-poop"></span></th>
             <th>Amt</th>
             <th>ml/oz</th>
             <th>Amt</th>

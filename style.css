@@ -19,10 +19,11 @@ button {
 }
 
 fieldset {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     inline-size: auto;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
 }
 
 #add-record-btn-group {
@@ -30,6 +31,7 @@ fieldset {
 }
 
 label {
+    font-size: 1.25rem;
     display: block;
     width: auto;
     margin-block: 0.25rem;
@@ -78,4 +80,44 @@ hr {
     border-top: 2px solid oklch(0 0 0);
     border-inline: none;
     border-bottom: none;
+}
+
+.checkbox-label {
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em;
+    cursor: pointer;
+    border: 1px solid light-dark(#1b1b1b, #a1a1a1);
+    border-radius: 0.5rem;
+}
+
+#add-diaper-change-event {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#add-feeding-event {
+    display: flex;
+    width: 100%;
+}
+
+#add-record-btn-group {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-end;
+}
+
+input {
+    font-size: 1.25rem;
+}
+
+button {
+    font-size: 1.25rem;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: 1px solid light-dark(#1b1b1b, #a1a1a1);
 }
