@@ -13,41 +13,6 @@
         <h1>Baby Tracker</h1>
     </header>
     <main>
-        <section id="feeding-window-form">
-            <h3>Feeding Window</h3>
-            <label>
-                Minutes to next feeding window
-                <input
-                    type="number"
-                    name="minutes-to-next-window"
-                    id="minutes-to-next-window"
-                    min="0"
-                    max="2440"
-                    step="1"
-                >
-            </label>
-            <label>
-                Feeding window duration (in minutes)
-                <input
-                    type="number"
-                    name="feeding-window-duration"
-                    id="feeding-window-duration"
-                    min="0"
-                    max="2440"
-                    step="1"
-                >
-            </label>
-            <label>
-                Next Window Start Time
-                <input
-                    type="datetime-local"
-                    name="feeding-window-start-time"
-                    id="feeding-window-start-time"
-                >
-            </label>
-            <button id="update-feeding-window-btn" type="button">Update Feeding Window</button>
-        </section>
-        <hr>
         <section id="add-record-form">
             <h3>Add New Record</h3>
             <label><i class="fa-2xl fa-solid fa-clock"></i> <input type="datetime-local" name="time" id="time"></label>
